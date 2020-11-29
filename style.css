@@ -11,6 +11,84 @@ html {
   line-height:1;
 }
 
+#myModal {
+  display:block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: white;
+}
+
+#myModal .background-voile {
+  background-color: rgb(143,27,15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  z-index: 666;
+}
+
+ /* Modal Header */
+ .modal-header {
+  padding: 2px 16px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.modal-header h2 {
+  text-align: center;
+  padding-bottom: 26px;
+}
+
+.modal-header .close-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-header .close-wrapper span {
+  cursor: pointer;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-body input{
+  padding: 16px;
+  font-size: 24px;
+  background-color: #c0392b;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  z-index: 5000;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: #e74c3c;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  animation-name: animatetop;
+  animation-duration: 0.7s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {opacity: 0}
+  to {opacity: 1}
+} 
+
 q,blockquote {
   quotes:none;
 }
