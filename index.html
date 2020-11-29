@@ -17,8 +17,9 @@
   </ul>
 </nav>
 
-<audio id="myaudio" loop="true" volume="0.5" src="song/goodbye.mp3">
-</audio> 
+<audio id="audio-goodbye" loop="true" src="song/goodbye.mp3"></audio>
+<audio id="audio-sadsong" loop="true" src="song/sad song.mp3"></audio>
+<audio id="audio-sebastien" loop="true" src="song/sebastien.mp3"></audio>
 
  <!-- Modal content -->
  <div id="myModal" class="modal">
@@ -31,8 +32,8 @@
         <h2>ARE YOU AFRAID OF PURE EMOTIONS ?</h2>
       </div>
       <div class="modal-body">
-        <input type="button" value="NO, I WANT THE HARDCORE VERSION" onclick=play()>
-        <input type="button" value="YES, GO EASY ON ME" onclick=closeModal()>
+        <input type="button" value="NO, I WANT THE HARDCORE VERSION" onclick=playGoodbye()>
+        <input type="button" value="YES, GO EASY ON ME" onclick=playSadSong()>
       </div>
     </div> 
   </div>
@@ -45,9 +46,16 @@
       modal.style.display = "none";
     }
 
-    function play() {
-      var audio = document.getElementById("myaudio");
+    function playGoodbye() {
+      var audio = document.getElementById("audio-goodbye");
       audio.volume = 0.2;
+      audio.play();
+      closeModal();
+    }
+
+    function playSadSong() {
+      var audio = document.getElementById("audio-sadsong");
+      audio.volume = 1;
       audio.play();
       closeModal();
     }
@@ -57,6 +65,9 @@
   
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
+      var audio = document.getElementById("audio-sebastien");
+      audio.volume = 1;
+      audio.play();
       closeModal();
     }  
   </script>
